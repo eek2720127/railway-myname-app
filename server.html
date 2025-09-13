@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <!-- SSR があるときはここに server 側で描画した HTML を埋め込みます -->
+    <div id="root"><link rel="preload" as="image" href="/src/assets/react.svg"/><div><a href="https://vite.dev" target="_blank"><img src="data:image/svg+xml,%3csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20xmlns:xlink=&#x27;http://www.w3.org/1999/xlink&#x27;%20aria-hidden=&#x27;true&#x27;%20role=&#x27;img&#x27;%20class=&#x27;iconify%20iconify--logos&#x27;%20width=&#x27;31.88&#x27;%20height=&#x27;32&#x27;%20preserveAspectRatio=&#x27;xMidYMid%20meet&#x27;%20viewBox=&#x27;0%200%20256%20257&#x27;%3e%3cdefs%3e%3clinearGradient%20id=&#x27;IconifyId1813088fe1fbc01fb466&#x27;%20x1=&#x27;-.828%25&#x27;%20x2=&#x27;57.636%25&#x27;%20y1=&#x27;7.652%25&#x27;%20y2=&#x27;78.411%25&#x27;%3e%3cstop%20offset=&#x27;0%25&#x27;%20stop-color=&#x27;%2341D1FF&#x27;%3e%3c/stop%3e%3cstop%20offset=&#x27;100%25&#x27;%20stop-color=&#x27;%23BD34FE&#x27;%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient%20id=&#x27;IconifyId1813088fe1fbc01fb467&#x27;%20x1=&#x27;43.376%25&#x27;%20x2=&#x27;50.316%25&#x27;%20y1=&#x27;2.242%25&#x27;%20y2=&#x27;89.03%25&#x27;%3e%3cstop%20offset=&#x27;0%25&#x27;%20stop-color=&#x27;%23FFEA83&#x27;%3e%3c/stop%3e%3cstop%20offset=&#x27;8.333%25&#x27;%20stop-color=&#x27;%23FFDD35&#x27;%3e%3c/stop%3e%3cstop%20offset=&#x27;100%25&#x27;%20stop-color=&#x27;%23FFA800&#x27;%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3cpath%20fill=&#x27;url(%23IconifyId1813088fe1fbc01fb466)&#x27;%20d=&#x27;M255.153%2037.938L134.897%20252.976c-2.483%204.44-8.862%204.466-11.382.048L.875%2037.958c-2.746-4.814%201.371-10.646%206.827-9.67l120.385%2021.517a6.537%206.537%200%200%200%202.322-.004l117.867-21.483c5.438-.991%209.574%204.796%206.877%209.62Z&#x27;%3e%3c/path%3e%3cpath%20fill=&#x27;url(%23IconifyId1813088fe1fbc01fb467)&#x27;%20d=&#x27;M185.432.063L96.44%2017.501a3.268%203.268%200%200%200-2.634%203.014l-5.474%2092.456a3.268%203.268%200%200%200%203.997%203.378l24.777-5.718c2.318-.535%204.413%201.507%203.936%203.838l-7.361%2036.047c-.495%202.426%201.782%204.5%204.151%203.78l15.304-4.649c2.372-.72%204.652%201.36%204.15%203.788l-11.698%2056.621c-.732%203.542%203.979%205.473%205.943%202.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505%204.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z&#x27;%3e%3c/path%3e%3c/svg%3e" class="logo" alt="Vite logo"/></a><a href="https://react.dev" target="_blank"><img src="/src/assets/react.svg" class="logo react" alt="React logo"/></a></div><h1>Vite + React</h1><div class="card"><button>count is <!-- -->0</button><p>Edit <code>src/App.jsx</code> and save to test HMR</p></div><p class="read-the-docs">Click on the Vite and React logos to learn more</p></div>
+    <!-- SSR を使わないなら既存の /src/main.jsx をそのまま参照してもOK -->
+    <script type="module" src="/src/entry-client.jsx"></script>
+  </body>
+</html>
+

@@ -7,7 +7,9 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- SSR があるときはここに server 側で描画した HTML を埋め込みます -->
+    <div id="root"><!--ssr-outlet--></div>
+    <!-- SSR を使わないなら既存の /src/main.jsx をそのまま参照してもOK -->
+    <script type="module" src="/src/entry-client.jsx"></script>
   </body>
 </html>
