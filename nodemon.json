@@ -1,0 +1,6 @@
+{
+  "watch": ["src/server"],
+  "ext": "js,jsx,json",
+  "exec": "npm run build:server && node dist/server/index.js",
+  "delay": "1000"
+}

@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:ssr": "NODE_ENV=development node server.js",
-    "build": "vite build",
+    "dev:ssr": "cross-env NODE_ENV=development node server.js",
     "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "build:ssr": "npm run build:client && npm run build:server",
-    "preview": "vite preview",
-    "start": "NODE_ENV=production node server.js"
+    "build:server": "swc src/server/index.js -o dist/server/index.js --source-maps",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node dist/server/index.js",
+    "dev:server": "nodemon --watch src/server --ext js,jsx --exec \"npm run build:server && node dist/server/index.js\"",
+    "preview": "vite preview"
   },
   "dependencies": {
     "express": "^4.21.2",
@@ -20,14 +20,18 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.13.5",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-react-swc": "^4.0.1",
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "nodemon": "^3.1.10",
     "vite": "^7.1.2"
   }
 }
