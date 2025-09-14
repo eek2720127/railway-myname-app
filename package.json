@@ -7,10 +7,11 @@
     "dev": "vite",
     "dev:ssr": "cross-env NODE_ENV=development node server.js",
     "build:client": "vite build --outDir dist/client",
-    "build:server": "swc src/server/index.js -o dist/server/index.js --source-maps",
-    "build": "npm run build:client && npm run build:server",
-    "start": "node dist/server/index.js",
-    "dev:server": "nodemon --watch src/server --ext js,jsx --exec \"npm run build:server && node dist/server/index.js\"",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "build:server": "swc src/server/index.js -o dist/static-server/index.js --source-maps",
+    "build": "npm run build:client && npm run build:ssr && npm run build:server",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev:server": "npm run build:client && nodemon",
     "preview": "vite preview"
   },
   "dependencies": {

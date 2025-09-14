@@ -8,15 +8,13 @@
     "transform": {
       "react": {
         "runtime": "automatic",
-        "development": true
+        "development": false
       }
     },
     "target": "es2022"
   },
   "module": {
-    "type": "es6",
-    "strict": true,
-    "lazy": false
+    "type": "es6"
   },
   "sourceMaps": true
 }
