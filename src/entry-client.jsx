@@ -1,7 +1,14 @@
-// src/entry-client.jsx でこれに置き換え
+// src/entry-client.jsx
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { hydrateRoot } from "react-dom/client";
 import App from "./App";
 
 const container = document.getElementById("root");
-createRoot(container).render(<App />);
+
+if (container) {
+  // hydrateRoot を使ってサーバレンダリング済みの DOM に React を「水和」する
+  hydrateRoot(container, <App />);
+  console.log("Client: hydrated");
+} else {
+  console.warn("Client: root container not found");
+}

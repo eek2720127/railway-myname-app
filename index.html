@@ -8,8 +8,6 @@
   </head>
   <body>
     <!--ssr-outlet-->
-    <!-- サーバがここに <div id="root">...</div> を埋め込む -->
-    <!-- 開発時のみ Vite の client スクリプトが必要になるため、dev の場合は server.js が自動で挿入します -->
-    <!-- 本番ではクライアントJSは除去して Hydration をしない構成にします -->
+    <script type="module" src="/src/entry-client.jsx"></script>
   </body>
 </html>
